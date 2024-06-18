@@ -19,29 +19,28 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
-              <th>Slug</th>
+              <th>Titlul</th>
+              <th>Denumire</th>
               <th>Is Parent</th>
               <th>Parent Category</th>
-              <th>Photo</th>
-              <th>Status</th>
+              <th>Poza</th>
+              <th>Statut</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
-              <th>Slug</th>
+              <th>Titlul</th>
+              <th>Denumire</th>
               <th>Is Parent</th>
               <th>Parent Category</th>
-              <th>Photo</th>
-              <th>Status</th>
+              <th>Poza</th>
+              <th>Statut</th>
               <th>Action</th>
             </tr>
           </tfoot>
           <tbody>
-
             @foreach($categories as $category)
               @php
               @endphp
@@ -72,7 +71,7 @@
                     <form method="POST" action="{{route('category.destroy',[$category->id])}}">
                       @csrf
                       @method('delete')
-                          <button class="btn btn-danger btn-sm dltBtn" data-id={{$category->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                          <button class="btn btn-danger btn-sm dltBtn" data-id='{{$category->id}}' style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>
@@ -134,7 +133,6 @@
           $('.dltBtn').click(function(e){
             var form=$(this).closest('form');
               var dataID=$(this).data('id');
-              // alert(dataID);
               e.preventDefault();
               swal({
                     title: "Are you sure?",

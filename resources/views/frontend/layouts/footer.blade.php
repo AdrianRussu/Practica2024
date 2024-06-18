@@ -1,57 +1,48 @@
-
-	<!-- Start Footer Area -->
-	<footer class="footer">
-		<!-- Footer Top -->
+<footer class="footer">
 		<div class="footer-top section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-5 col-md-6 col-12">
-						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="{{asset('backend/img/logo2.png')}}" alt="#"></a>
+							@php
+                            $settings=DB::table('settings')->get();
+
+                            @endphp
+								<a href="index.html"><img style="width: 200px;" src="@foreach($settings as $data) {{$data->logo}} @endforeach" alt="logo"></a>
 							</div>
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
 							<p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
-							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+							<p class="call">Ai intrebari?Apeleaza-ne<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
 						</div>
-						<!-- End Single Widget -->
 					</div>
 					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Information</h4>
+							<h4>Informatii</h4>
 							<ul>
-								<li><a href="{{route('about-us')}}">About Us</a></li>
+								<li><a href="#">About Us</a></li>
 								<li><a href="#">Faq</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
 								<li><a href="{{route('contact')}}">Contact Us</a></li>
 								<li><a href="#">Help</a></li>
 							</ul>
 						</div>
-						<!-- End Single Widget -->
 					</div>
 					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
 						<div class="single-footer links">
 							<h4>Customer Service</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
 								<li><a href="#">Returns</a></li>
 								<li><a href="#">Shipping</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
 						</div>
-						<!-- End Single Widget -->
 					</div>
 					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Single Widget -->
 						<div class="single-footer social">
 							<h4>Get In Tuch</h4>
-							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
 									<li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
@@ -59,37 +50,26 @@
 									<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
 								</ul>
 							</div>
-							<!-- End Single Widget -->
-							<div class="sharethis-inline-follow-buttons"></div>
 						</div>
-						<!-- End Single Widget -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Footer Top -->
 		<div class="copyright">
 			<div class="container">
 				<div class="inner">
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal Rai</a>  -  All Rights Reserved.</p>
+								<p>Copyright © {{date('Y')}} <a href="" target="_blank">II.Lupu Dumitru</a>  -  Toate drepturile rezervate.</p>
 							</div>
 						</div>
-						<div class="col-lg-6 col-12">
-							<div class="right">
-								<img src="{{asset('backend/img/payments.png')}}" alt="#">
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<!-- /End Footer Area -->
- 
-	<!-- Jquery -->
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-migrate-3.0.0.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery-ui.min.js')}}"></script>
@@ -127,28 +107,4 @@
 
 	
 	@stack('scripts')
-	<script>
-		setTimeout(function(){
-		  $('.alert').slideUp();
-		},5000);
-		$(function() {
-		// ------------------------------------------------------- //
-		// Multi Level dropdowns
-		// ------------------------------------------------------ //
-			$("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-				event.preventDefault();
-				event.stopPropagation();
-
-				$(this).siblings().toggleClass("show");
-
-
-				if (!$(this).next().hasClass('show')) {
-				$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-				}
-				$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-				$('.dropdown-submenu .show').removeClass("show");
-				});
-
-			});
-		});
-	  </script>
+	

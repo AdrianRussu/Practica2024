@@ -65,29 +65,7 @@ window.onload = () => {
 			}
 		});
 		
-		/*=======================
-		  Search JS JS
-		=========================*/ 
-		$('.top-search a').on( "click", function(){
-			$('.search-top').toggleClass('active');
-		});
 		
-		/*=======================
-		  Slider Range JS
-		=========================*/ 
-		// $( function() {
-		// 	$( "#slider-range" ).slider({
-		// 	  range: true,
-		// 	  min: 0,
-		// 	  max: 1000,
-		// 	  values: [ 120, 250 ],
-		// 	  slide: function( event, ui ) {
-		// 		$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-		// 	  }
-		// 	});
-		// 	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-		// 	  " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-		// } );
 		
 		/*=======================
 		  Home Slider JS
@@ -303,22 +281,6 @@ window.onload = () => {
 	======================================*/	
 	$('select').niceSelect();
 		
-	/*=====================================
-	 Others JS
-	======================================*/ 	
-	// $( function() {
-	// 	$( "#slider-range" ).slider({
-	// 		range: true,
-	// 		min: 0,
-	// 		max: 1000,
-	// 		values: [ 0, 1000 ],
-	// 		slide: function( event, ui ) {
-	// 			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-	// 		}
-	// 	});
-	// 	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-	// 	  " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-	// } );
 	
 	/*=====================================
 	  Preloader JS

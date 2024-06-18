@@ -17,27 +17,27 @@
         <table class="table table-bordered" id="order-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+              <th>Nr.Ordine</th>
+              <th>Numar comanda:</th>
+              <th>Nume</th>
               <th>Email</th>
-              <th>Quantity</th>
-              <th>Charge</th>
-              <th>Total Amount</th>
-              <th>Status</th>
+              <th>Cantitate</th>
+              <th>Costul</th>
+              <th>Pret total</th>
+              <th>Statut</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
+              <th>Nr.Ordine</th>
+              <th>Numar comanda:</th>
+              <th>Nume</th>
               <th>Email</th>
-              <th>Quantity</th>
-              <th>Charge</th>
-              <th>Total Amount</th>
-              <th>Status</th>
+              <th>Cantitate</th>
+              <th>Costul</th>
+              <th>Pret total</th>
+              <th>Statut</th>
               <th>Action</th>
               </tr>
           </tfoot>
@@ -80,7 +80,7 @@
         </table>
         <span style="float:right">{{$orders->links()}}</span>
         @else
-          <h6 class="text-center">No orders found!!! Please order some products</h6>
+          <h6 class="text-center">Nu sau gasit comenzi</h6>
         @endif
       </div>
     </div>

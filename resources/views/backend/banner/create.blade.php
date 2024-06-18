@@ -16,7 +16,6 @@
         <span class="text-danger">{{$message}}</span>
         @enderror
         </div>
-
         <div class="form-group">
           <label for="inputDesc" class="col-form-label">Description</label>
           <textarea class="form-control" id="description" name="description">{{old('description')}}</textarea>
@@ -24,7 +23,6 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-
         <div class="form-group">
         <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
         <div class="input-group">
@@ -40,7 +38,6 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
           <select name="status" class="form-control">
@@ -58,9 +55,7 @@
       </form>
     </div>
 </div>
-
 @endsection
-
 @push('styles')
 <link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
 @endpush
